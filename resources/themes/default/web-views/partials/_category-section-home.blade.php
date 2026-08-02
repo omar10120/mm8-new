@@ -123,7 +123,7 @@
         @media (max-width: 767.98px) {
             .home-categories-scroll {
                 --home-cat-gap: 10px;
-                --home-cat-visible: 2;
+                --home-cat-visible: 3;
                 gap: 14px var(--home-cat-gap);
             }
 

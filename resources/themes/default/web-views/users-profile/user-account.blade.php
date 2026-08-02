@@ -1,3 +1,38 @@
+@push('css_or_js')
+    <link rel="stylesheet" href="{{ theme_asset(path: 'public/assets/front-end/plugin/intl-tel-input/css/intlTelInput.css') }}">
+    <style>
+        /* === RTL fixes for intl-tel-input === */
+        [dir="rtl"] .iti {
+            direction: ltr !important;   /* keep internal layout LTR */
+        }
+
+        /* Move the flag container to the right */
+        [dir="rtl"] .iti__flag-container {
+            right: 0 !important;
+            left: auto !important;
+        }
+
+        /* Adjust input padding: right for flag, left for normal text */
+        [dir="rtl"] .iti__tel-input,
+        [dir="rtl"] .phone-input-with-country-picker {
+            padding-right: 52px !important;
+            padding-left: 6px !important;
+        }
+
+        /* Ensure the dropdown aligns with the flag on the right */
+        [dir="rtl"] .iti__dropdown-content {
+            right: 0;
+            left: auto;
+        }
+
+        /* Force the input field to be LTR for phone numbers */
+        .phone-input-with-country-picker {
+            direction: ltr !important;
+        }
+    </style>
+@endpush
+
+
 @extends('layouts.front-end.app')
 
 @section('title', auth('customer')->user()->f_name.' '.auth('customer')->user()->l_name)
@@ -187,3 +222,5 @@
     </div>
 
 @endsection
+
+

@@ -16,51 +16,49 @@
                             </div>
                         </div>
 
-                        {{-- Desktop: unchanged --}}
+                        {{-- Desktop: unchanged (your marquee) --}}
                         <div class="d-none d-lg-block">
                             <marquee>
-                            <div class="row mt-3">
-                            
+                                <div class="row mt-3">
                                     @foreach($categories as $key => $category)
                                         @if ($key < 8)
                                             <div class="text-center __m-5px __cate-item">
                                                 <a href="{{ route('category-products', ['slug' => $category['slug']]) }}" class="d-flex flex-column align-items-center">
                                                     <div class="__img">
                                                         <img loading="lazy" alt="{{ $category->name }}"
-                                                            src="{{ getStorageImages(path: $category->icon_full_url, type: 'category') }}">
+                                                             src="{{ getStorageImages(path: $category->icon_full_url, type: 'category') }}">
                                                     </div>
                                                     <h3 class="text-center max-w-100px mx-auto fs-13 font-semibold mt-2 letter-spacing-0 line--limit-2">{{Str::limit($category->name, 15)}}</h3>
                                                 </a>
                                             </div>
-                                            @endif
-                                            @endforeach
-                                            
-                                        </div>
-                                    </marquee>
+                                        @endif
+                                    @endforeach
+                                </div>
+                            </marquee>
                         </div>
 
-                        {{-- Mobile: 2 columns per row (replaces carousel) --}}
+                        {{-- Mobile: 2 columns per row with vertical scroll if more than 6 categories --}}
                         <div class="d-lg-none">
-                            
-                            <div class="row mt-3">
-                                @foreach($categories->take(8) as $category)
-                                    <div class="col-6 mb-3 text-center __cate-item">
-                                        <a href="{{ route('category-products', ['slug' => $category['slug']]) }}" class="d-flex flex-column align-items-center">
-                                            <div class="__img mw-20 h-20">
-                                                <img alt="{{ $category->name }}"
-                                                     src="{{ getStorageImages(path: $category->icon_full_url, type: 'category') }}">
-                                            </div>
-                                            <h3 class="text-center line--limit-2 small mt-2 letter-spacing-0">{{ $category->name }}</h3>
-                                        </a>
-                                    </div>
-                                @endforeach
+                            <div class="overflow-y-auto" style="max-height: 320px;"> {{-- Adjust height to show ~3 rows --}}
+                                <div class="row mt-3">
+                                    @foreach($categories->take(8) as $category)
+                                        <div class="col-6 mb-3 text-center __cate-item">
+                                            <a href="{{ route('category-products', ['slug' => $category['slug']]) }}" class="d-flex flex-column align-items-center">
+                                                <div class="__img mw-20 h-20">
+                                                    <img alt="{{ $category->name }}"
+                                                         src="{{ getStorageImages(path: $category->icon_full_url, type: 'category') }}">
+                                                </div>
+                                                <h3 class="text-center line--limit-2 small mt-2 letter-spacing-0">{{ $category->name }}</h3>
+                                            </a>
+                                        </div>
+                                    @endforeach
+                                </div>
                             </div>
-
-                      
                         </div>
+
                     </div>
                 </div>
-            </div>  
+            </div>
         </div>
     </section>
 @endif

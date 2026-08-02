@@ -15,11 +15,16 @@
                                 </a>
                             </div>
                         </div>
+                        
+                        {{-- Desktop View: 2 rows of 4 columns --}}
                         <div class="d-none d-lg-block">
                             <div class="row mt-3">
-                                @foreach($categories as $key => $category)
-                                    @if ($key < 8)
-                                        <div class="text-center __m-5px __cate-item">
+                                @php
+                                    $chunkedCategories = $categories->take(8)->chunk(4);
+                                @endphp
+                                @foreach($chunkedCategories as $chunk)
+                                    @foreach($chunk as $category)
+                                        <div class="text-center __m-5px __cate-item col-3">
                                             <a href="{{ route('category-products', ['slug' => $category['slug']]) }}" class="d-flex flex-column align-items-center">
                                                 <div class="__img">
                                                     <img loading="lazy" alt="{{ $category->name }}"
@@ -28,27 +33,44 @@
                                                 <h3 class="text-center max-w-100px mx-auto fs-13 font-semibold mt-2 letter-spacing-0 line--limit-2">{{Str::limit($category->name, 15)}}</h3>
                                             </a>
                                         </div>
-                                    @endif
+                                    @endforeach
                                 @endforeach
                             </div>
                         </div>
+                        
+                        {{-- Mobile View: 2 columns per row --}}
                         <div class="d-lg-none">
-                            <div class="owl-theme owl-carousel categories--slider mt-3">
-                                @foreach($categories as $key => $category)
-                                    @if ($key<8)
-                                        <div class="text-center m-0 __cate-item w-100">
-                                            <a href="{{ route('category-products', ['slug' => $category['slug']]) }}">
-                                                <div class="__img mw-100 h-auto">
-                                                    <img alt="{{ $category->name }}"
-                                                         src="{{ getStorageImages(path: $category->icon_full_url, type: 'category') }}">
-                                                </div>
-                                                <h3 class="text-center line--limit-2 small mt-2 letter-spacing-0">{{ $category->name }}</h3>
-                                            </a>
-                                        </div>
-                                    @endif
+                            <div class="row mt-3">
+                                @foreach($categories->take(8) as $category)
+                                    <div class="col-6 mb-3 text-center __cate-item">
+                                        <a href="{{ route('category-products', ['slug' => $category['slug']]) }}" class="d-flex flex-column align-items-center">
+                                            <div class="__img mw-100 h-auto">
+                                                <img alt="{{ $category->name }}"
+                                                     src="{{ getStorageImages(path: $category->icon_full_url, type: 'category') }}">
+                                            </div>
+                                            <h3 class="text-center line--limit-2 small mt-2 letter-spacing-0">{{ $category->name }}</h3>
+                                        </a>
+                                    </div>
                                 @endforeach
                             </div>
                         </div>
+                        
+                        {{-- Moving Categories Marquee --}}
+                        <div class="mt-4 pt-2 border-top">
+                            <marquee behavior="scroll" direction="left" scrollamount="5" onmouseover="this.stop()" onmouseout="this.start()">
+                                @foreach($categories as $category)
+                                    <a href="{{ route('category-products', ['slug' => $category['slug']]) }}" class="mx-3 text-decoration-none">
+                                        <span class="badge bg-light text-dark p-2 px-3">
+                                            <img src="{{ getStorageImages(path: $category->icon_full_url, type: 'category') }}" 
+                                                 alt="{{ $category->name }}" 
+                                                 style="width: 20px; height: 20px; object-fit: contain; margin-right: 5px;">
+                                            {{ $category->name }}
+                                        </span>
+                                    </a>
+                                @endforeach
+                            </marquee>
+                        </div>
+                        
                     </div>
                 </div>
             </div>

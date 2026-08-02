@@ -1,0 +1,28 @@
+<?php
+
+return [
+	"App_Deep_Link_Setup" => "App Deep Link Setup",
+	"Language_field_is_required" => "Language field is required",
+	"brand_setup" => "Brand setup",
+	"Limited_stock" => "Limited stock",
+	"Limited_Stock" => "Limited Stock",
+	"Bulk_Import" => "Bulk Import",
+	"Product_Gallery" => "Product Gallery",
+	"Okay,_Got_it" => "Okay, Got it",
+	"Don’t_show_again" => "Don’t show again",
+	"Click_to_view" => "Click to view",
+	"this_field_is_required" => "This field is required",
+	"file_size_is_larger" => "File size is larger",
+	"max_limit_crossed" => "Max limit crossed",
+	"something_went_wrong!" => "Something went wrong!",
+	"please_enter_a_valid_email" => "Please enter a valid email",
+	"password_must_be_8+_chars_with_upper,_lower,_number_&_symbol" => "Password must be 8+ chars with upper, lower, number & symbol",
+	"Invalid_file_type_selected" => "Invalid file type selected",
+	"name_field_is_required" => "Name field is required",
+	"at_least_one_lowercase_letter_" => "At least one lowercase letter ",
+	"confirm_password_does_not_match" => "Confirm password does not match",
+	"The_language_code_must_be_unique" => "The language code must be unique",
+	"Clear_Filter" => "Clear Filter",
+	"Attribute_List" => "Attribute List",
+	"this_description_will_be_seen_on_search_engine_results_pages_and_while_sharing_the_products_link_on_social_platforms" => "This description will be seen on search engine results pages and while sharing the products link on social platforms",
+];

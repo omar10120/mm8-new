@@ -46,7 +46,7 @@
                                 @foreach($categories->take(8) as $category)
                                     <div class="col-6 mb-3 text-center __cate-item">
                                         <a href="{{ route('category-products', ['slug' => $category['slug']]) }}" class="d-flex flex-column align-items-center">
-                                            <div class="__img mw-20 h-auto">
+                                            <div class="__img mw-20 h-50">
                                                 <img alt="{{ $category->name }}"
                                                      src="{{ getStorageImages(path: $category->icon_full_url, type: 'category') }}">
                                             </div>

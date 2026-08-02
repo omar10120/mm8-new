@@ -18,29 +18,23 @@
                             </div>
                         </div>
 
-                        {{-- Two‑row horizontal scroll container (Bootstrap + inline styles) --}}
-                        <div class="d-flex flex-column flex-wrap overflow-auto mt-3"
-                             style="height: 200px; overflow-x: auto; overflow-y: hidden; gap: 10px; align-content: flex-start;">
-                            
-                            @foreach($categories as $category)
-                                <div class="text-center"
-                                     style="flex: 0 0 140px; width: 140px; height: 90px; display: flex; flex-direction: column; align-items: center; justify-content: center;">
+                        {{-- Unified grid: 4 columns per row → 2 rows for 8 categories --}}
+                        <div class="row mt-3">
+                            @foreach($categories->take(8) as $category)
+                                <div class="col-3 text-center __cate-item">
                                     <a href="{{ route('category-products', ['slug' => $category['slug']]) }}"
                                        class="d-flex flex-column align-items-center">
                                         <div class="__img">
                                             <img loading="lazy" alt="{{ $category->name }}"
-                                                 src="{{ getStorageImages(path: $category->icon_full_url, type: 'category') }}"
-                                                 style="max-width: 60px; max-height: 60px;">
+                                                 src="{{ getStorageImages(path: $category->icon_full_url, type: 'category') }}">
                                         </div>
-                                        <h3 class="text-center fs-13 font-semibold mt-1 letter-spacing-0 line--limit-2"
-                                            style="font-size: 13px; margin: 0; max-width: 120px;">
+                                        <h3 class="text-center max-w-100px mx-auto fs-13 font-semibold mt-2 letter-spacing-0 line--limit-2">
                                             {{ Str::limit($category->name, 15) }}
                                         </h3>
                                     </a>
                                 </div>
                             @endforeach
                         </div>
-
                     </div>
                 </div>
             </div>

@@ -22,8 +22,10 @@
                             </div>
                         </div>
 
-                        {{-- 2-row grid: desktop 4/row visible, mobile 2/row, rest overflow-x --}}
+                        {{-- 2-row grid: desktop 4/row visible, mobile 2/row, rest overflow-x + autoplay --}}
                         <div class="home-categories-scroll mt-3"
+                             id="home-categories-scroll"
+                             data-rtl="{{ Session::get('direction') === 'rtl' ? '1' : '0' }}"
                              style="--home-cat-cols: {{ $homeCategoryCols }};">
                             @foreach($categories as $category)
                                 <div class="home-category-item text-center __cate-item">
@@ -131,4 +133,76 @@
             }
         }
     </style>
+
+    @push('script')
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                const track = document.getElementById('home-categories-scroll');
+                if (!track) return;
+
+                const isRtl = track.dataset.rtl === '1';
+                const intervalMs = 3000;
+                let timer = null;
+                let paused = false;
+
+                const maxScroll = () => Math.max(0, track.scrollWidth - track.clientWidth);
+                const hasOverflow = () => maxScroll() > 4;
+
+                const getStep = () => {
+                    const item = track.querySelector('.home-category-item');
+                    if (!item) return 0;
+                    const gap = parseFloat(getComputedStyle(track).columnGap) || 12;
+                    return item.getBoundingClientRect().width + gap;
+                };
+
+                const atEnd = () => {
+                    return Math.ceil(Math.abs(track.scrollLeft) + track.clientWidth) >= track.scrollWidth - 2;
+                };
+
+                const tick = () => {
+                    if (paused || document.hidden || !hasOverflow()) return;
+
+                    if (atEnd()) {
+                        track.scrollTo({ left: 0, behavior: 'smooth' });
+                        return;
+                    }
+
+                    const step = getStep();
+                    track.scrollBy({
+                        left: isRtl ? -step : step,
+                        behavior: 'smooth'
+                    });
+                };
+
+                const start = () => {
+                    stop();
+                    if (!hasOverflow()) return;
+                    timer = setInterval(tick, intervalMs);
+                };
+
+                const stop = () => {
+                    if (timer) {
+                        clearInterval(timer);
+                        timer = null;
+                    }
+                };
+
+                track.addEventListener('mouseenter', () => { paused = true; });
+                track.addEventListener('mouseleave', () => { paused = false; });
+                track.addEventListener('touchstart', () => { paused = true; }, { passive: true });
+                track.addEventListener('touchend', () => {
+                    paused = false;
+                    start();
+                }, { passive: true });
+
+                document.addEventListener('visibilitychange', () => {
+                    if (document.hidden) stop();
+                    else start();
+                });
+
+                window.addEventListener('resize', () => start());
+                setTimeout(start, 500);
+            });
+        </script>
+    @endpush
 @endif

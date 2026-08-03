@@ -109,4 +109,8 @@ return [
 	"View_Translations_-" => "View Translations -",
 	"Back_to_Language_Setup" => "Back to Language Setup",
 	"Language_Content_Table" => "Language Content Table",
+	"ex:United_States_Dollar" => "Ex:United States Dollar",
+	"currency_name_is_required" => "Currency name is required",
+	"currency_symbol_is_required" => "Currency symbol is required",
+	"currency_code_is_required" => "Currency code is required",
 ];

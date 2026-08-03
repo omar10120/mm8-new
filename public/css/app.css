@@ -10930,5 +10930,5 @@ a.text-dark:focus {
 
 
   html  body{
-    font-family: 'cairo', sans-serif;
+    font-family: 'cairo', sans-serif !important;
 }

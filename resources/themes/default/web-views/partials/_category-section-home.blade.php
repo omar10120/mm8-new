@@ -120,7 +120,7 @@
             padding-inline: 4px;
         }
 
-        @media (max-width: 767.99px) {
+        @media (max-width: 767.98px) {
             .home-categories-scroll {
                 --home-cat-gap: 10px;
                 --home-cat-visible: 3;

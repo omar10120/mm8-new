@@ -247,7 +247,7 @@
 
     </div>
 
-    @include("taxmodule::mm8market.offcanvas._setup-vat-tax-calculation")
+    @include("taxmodule::6valley.offcanvas._setup-vat-tax-calculation")
 @endsection
 
 @push('script')

@@ -150,10 +150,10 @@
             </button>
             <img width="44" class="img-fit aspect-1 w-40px flex-shrink-0"
                 src="{{ getStorageImages(path: $web_config['mob_logo'], type: 'logo') }}"
-                alt="mm8market"
+                alt="6Valley"
             >
             <div class="flex-grow-1">
-                <h5 class="fs-14 mb-1">mm8market {{ translate('Mobile_App') }}</h5>
+                <h5 class="fs-14 mb-1">6Valley {{ translate('Mobile_App') }}</h5>
                 <div class="fs-11">{{ translate('For_better_experience_download') }}</div>
                 <button type="button" id="install-btn" class="btn btn-primary fs-12 fw-semibold px-2 py-1 mt-2">
                     {{ translate('Download') }}

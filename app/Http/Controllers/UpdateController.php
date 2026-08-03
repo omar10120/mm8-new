@@ -33,7 +33,7 @@ class UpdateController extends Controller
         Helpers::setEnvironmentValue('SOFTWARE_ID', 'MzE0NDg1OTc=');
         Helpers::setEnvironmentValue('SOFTWARE_VERSION', SOFTWARE_VERSION);
         Helpers::setEnvironmentValue('APP_MODE', 'live');
-        Helpers::setEnvironmentValue('APP_NAME', 'mm8market' . time());
+        Helpers::setEnvironmentValue('APP_NAME', '6valley' . time());
         Helpers::setEnvironmentValue('SESSION_LIFETIME', '60');
 
         $response = $this->getRequestConfig(

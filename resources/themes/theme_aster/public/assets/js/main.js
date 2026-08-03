@@ -1,5 +1,5 @@
 /*---------------------------------------------
-	Template name:  mm8market Grocery
+	Template name:  6valley Grocery
 	Version:        1.0
 	Author:         6amtech
 	Author url:     https://6amtech.com/

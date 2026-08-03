@@ -50,7 +50,7 @@ class TaxVatController extends Controller
 
         $existTaxVatData = Tax::exists();
 
-        return view('taxmodule::mm8market.tax.tax_list', [
+        return view('taxmodule::6valley.tax.tax_list', [
             'vatTaxes' => $vatTaxes,
             'existTaxVatData' => $existTaxVatData
         ]);

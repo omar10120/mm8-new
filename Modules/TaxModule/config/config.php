@@ -7,7 +7,7 @@ return [
      */
     'name' => 'TaxModule',
 
-    'project' => 'mm8market',
+    'project' => '6valley',
 
     'version' => '1.0.0',
 

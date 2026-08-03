@@ -103,7 +103,7 @@ class VendorTaxReportController extends Controller
             ]
         );
 
-        return view('taxmodule::mm8market.report.vendor-tax-report', [
+        return view('taxmodule::6valley.report.vendor-tax-report', [
             'startDate' => $startDate,
             'endDate' => $endDate,
             'shops' => $shops,
@@ -203,7 +203,7 @@ class VendorTaxReportController extends Controller
             ]
         );
 
-        return view('taxmodule::mm8market.report.vendor-tax-report-details', [
+        return view('taxmodule::6valley.report.vendor-tax-report-details', [
             'startDate' => $startDate,
             'endDate' => $endDate,
             'shop' => $shop,

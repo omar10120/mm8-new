@@ -53,7 +53,7 @@ class SystemTaxVatSetupController extends Controller
         $country_code = null;
         $systemData = $this->getProjectWiseSystemData();
 
-        return view('taxmodule::mm8market.tax.system_tax_setup', [
+        return view('taxmodule::6valley.tax.system_tax_setup', [
             'taxVats' => $taxVats,
             'systemTaxVat' => $systemTaxVat,
             'country_code' => $country_code,

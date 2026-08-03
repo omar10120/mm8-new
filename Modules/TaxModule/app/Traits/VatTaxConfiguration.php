@@ -61,7 +61,7 @@ trait VatTaxConfiguration
                 'additional_tax' => ['tax_on_packaging_charge'],
                 'payer_types' => ['vendor'],
             ],
-            'mm8market' => [
+            '6valley' => [
                 'tax_calculate_from' => ['Calculate_Tax_on_Billing_Address_Location', 'Calculate_Tax_on_Shipping_Address_Location'],
                 'tax_calculate_on' => ['order_wise', 'product_wise', 'category_wise'],
                 'additional_tax' => ['tax_on_delivery_charge'],
@@ -84,11 +84,11 @@ trait VatTaxConfiguration
                 'tax_list' => 'taxmodule::tax.tax_list',
                 'system_tax_setup' => 'taxmodule::tax.system_tax_setup',
             ],
-            'mm8market' => [
-                'tax_list' => 'taxmodule::mm8market.tax.tax_list',
-                'tax_list_export' => 'taxmodule::mm8market.file-exports.tax_list_export',
-                'admin_tax_report' => 'taxmodule::mm8market.file-exports.admin_tax_report',
-                'system_tax_setup' => 'taxmodule::mm8market.tax.system_tax_setup',
+            '6valley' => [
+                'tax_list' => 'taxmodule::6valley.tax.tax_list',
+                'tax_list_export' => 'taxmodule::6valley.file-exports.tax_list_export',
+                'admin_tax_report' => 'taxmodule::6valley.file-exports.admin_tax_report',
+                'system_tax_setup' => 'taxmodule::6valley.tax.system_tax_setup',
             ],
         ];
 
@@ -109,7 +109,7 @@ trait VatTaxConfiguration
                 'parcel_category' => 'App\Models\ParcelCategory',
                 'campaign_product' => 'App\Models\ItemCampaign',
             ],
-            'mm8market' => [
+            '6valley' => [
                 'product' => 'App\Models\Product',
                 'category' => 'App\Models\Category',
                 'order' => 'App\Models\Order',

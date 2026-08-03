@@ -109,7 +109,7 @@ class AdminTaxReportController extends Controller
             'tax_rate' => Tax::all(),
         ];
 
-        return view('taxmodule::mm8market.report.admin-tax-report', [
+        return view('taxmodule::6valley.report.admin-tax-report', [
             'date_range_type' => $request['date_range_type'],
             'startDate' => $startDate,
             'endDate' => $endDate,
@@ -212,7 +212,7 @@ class AdminTaxReportController extends Controller
             ]
         );
 
-        return view('taxmodule::mm8market.report.admin-tax-report-details', [
+        return view('taxmodule::6valley.report.admin-tax-report-details', [
             'startDate' => $startDate,
             'endDate' => $endDate,
             'date_range_type' => $request['date_range_type'],

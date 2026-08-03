@@ -1,4 +1,4 @@
-@include("taxmodule::mm8market.offcanvas._view-guideline-button")
+@include("taxmodule::6valley.offcanvas._view-guideline-button")
 
 <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasSetupGuide" aria-labelledby="offcanvasSetupGuideLabel"
      data-status="{{ request('offcanvasShow') && request('offcanvasShow') == 'offcanvasSetupGuide' ? 'show' : '' }}">

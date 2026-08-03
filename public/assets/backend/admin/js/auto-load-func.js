@@ -44,7 +44,7 @@ function getInitialDataForPanel() {
                 $("#popup-modal").appendTo("body").modal("show");
             }
 
-            if (document.cookie.indexOf("mm8market_restock_request_status=accepted") !== -1 || document.cookie.indexOf("mm8market_restock_request_status=reject") !== -1) {
+            if (document.cookie.indexOf("6valley_restock_request_status=accepted") !== -1 || document.cookie.indexOf("6valley_restock_request_status=reject") !== -1) {
                 $(".product-restock-stock-alert").hide();
             } else {
                 if (response?.restockProductCount > 0 && response?.restockProduct) {

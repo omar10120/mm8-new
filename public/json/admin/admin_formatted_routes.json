@@ -1452,7 +1452,7 @@
         "uri": "admin/vat-tax/list",
         "uri_count": 3,
         "method": "GET",
-        "view": "taxmodule::mm8market/tax/tax_list",
+        "view": "taxmodule::6valley/tax/tax_list",
         "priority": 2,
         "type": "page"
     },
@@ -1463,7 +1463,7 @@
         "uri": "admin/vat-tax/system-vat-tax",
         "uri_count": 3,
         "method": "GET",
-        "view": "taxmodule::mm8market/tax/system_tax_setup",
+        "view": "taxmodule::6valley/tax/system_tax_setup",
         "priority": 2,
         "type": "page"
     },
@@ -1474,7 +1474,7 @@
         "uri": "admin/report/vendor-wise-taxes",
         "uri_count": 3,
         "method": "GET",
-        "view": "taxmodule::mm8market/report/vendor-tax-report",
+        "view": "taxmodule::6valley/report/vendor-tax-report",
         "priority": 2,
         "type": "page"
     },
@@ -1485,7 +1485,7 @@
         "uri": "admin/report/vendor-tax-report",
         "uri_count": 3,
         "method": "GET",
-        "view": "taxmodule::mm8market/report/vendor-tax-report-details",
+        "view": "taxmodule::6valley/report/vendor-tax-report-details",
         "priority": 2,
         "type": "page"
     }

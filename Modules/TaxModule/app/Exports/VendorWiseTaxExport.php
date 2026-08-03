@@ -32,7 +32,7 @@ class VendorWiseTaxExport implements FromView, ShouldAutoSize, WithStyles, WithC
 
     public function view(): View
     {
-        return view('taxmodule::6valley.file-exports.vendor-wise-tax-report', [
+        return view('taxmodule::mm8.file-exports.vendor-wise-tax-report', [
             'data' => $this->data,
         ]);
     }

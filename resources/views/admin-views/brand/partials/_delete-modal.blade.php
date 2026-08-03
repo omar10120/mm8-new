@@ -8,7 +8,7 @@
             </div>
             <div class="modal-body px-20 py-0 mb-30">
                 <div class="d-flex flex-column align-items-center text-center mb-30">
-                    <img src="http://localhost/Backend-6Valley-eCommerce-CMS/public/assets/new/back-end/img/modal/delete.png" width="80" class="mb-20" id="" alt="">
+                    <img src="http://localhost/Backend-mm8-eCommerce-CMS/public/assets/new/back-end/img/modal/delete.png" width="80" class="mb-20" id="" alt="">
                     <h2 class="modal-title mb-3" id="">{{ translate('Are_you_sure_to_delete_this_brand') }}?</h2>
                     <div class="text-center" id="">{{ translate('If once you delete this Brand, you will lost this Brand data permanently.') }} </div>
                 </div>

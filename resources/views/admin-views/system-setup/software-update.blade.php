@@ -16,7 +16,7 @@
             <span>
                 {{ translate('Your_current_version_is') }} {{ SOFTWARE_VERSION }}. {{ translate('To_check_our_new_version') }}
                 <a class="text-decoration-underline fw-semibold" target="_blank"
-                   href="{{ 'https://codecanyon.net/item/6valley-multivendor-ecommerce-complete-ecommerce-mobile-app-web-and-admin-panel/31448597' }}">
+                   href="{{ 'https://codecanyon.net/item/mm8-multivendor-ecommerce-complete-ecommerce-mobile-app-web-and-admin-panel/31448597' }}">
                     {{ translate('Click_Here') }}
                 </a>
             </span>

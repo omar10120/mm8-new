@@ -31,7 +31,7 @@ class AdminTaxReportDetailsExport implements FromView, ShouldAutoSize, WithStyle
     public function view(): View
     {
         $data = $this->data;
-        return view('taxmodule::6valley.file-exports.admin_tax_report_details', [
+        return view('taxmodule::mm8.file-exports.admin_tax_report_details', [
             'data' => $data,
         ]);
     }

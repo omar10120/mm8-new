@@ -30,7 +30,7 @@ class VendorTaxExport implements FromView, ShouldAutoSize, WithStyles, WithColum
 
     public function view(): View
     {
-        return view('taxmodule::6valley.file-exports.vendor-single-tax-report', [
+        return view('taxmodule::mm8.file-exports.vendor-single-tax-report', [
             'data' => $this->data,
         ]);
     }

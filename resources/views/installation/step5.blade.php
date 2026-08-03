@@ -2,14 +2,14 @@
 
 @section('content')
     <div class="text-center text-white mb-4">
-        <h2>{{ "6valley Software Installation" }}</h2>
+        <h2>{{ "mm8 Software Installation" }}</h2>
         <h6 class="fw-normal">
             {{ "Please proceed step by step with proper data according to instructions" }}
         </h6>
     </div>
 
     <div class="pb-2">
-        <div class="progress cursor-pointer" role="progressbar" aria-label="6valley Software Installation"
+        <div class="progress cursor-pointer" role="progressbar" aria-label="mm8 Software Installation"
              aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" data-bs-toggle="tooltip"
              data-bs-placement="top" data-bs-custom-class="custom-progress-tooltip" data-bs-title="Final Step!"
              data-bs-delay='{"hide":1000}'>
@@ -49,7 +49,7 @@
                                         {{ "Business Name" }}
                                     </label>
                                     <input type="text" id="first-name" class="form-control" name="company_name"
-                                           required placeholder="Ex: 6valley">
+                                           required placeholder="Ex: mm8">
                                 </div>
                             </div>
                             <div class="col-md-6">

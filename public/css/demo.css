@@ -64,3 +64,8 @@ a[href^="tel:"]::after {
 
 
 
+
+
+html  body{
+    font-family: 'cairo', sans-serif;
+}

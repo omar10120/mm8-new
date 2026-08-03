@@ -49,7 +49,9 @@
     </section>
 
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Tajawal:wght@200;300;400;500;700;800;900&display=swap');
         .home-categories-scroll {
+            /* font-family: 'cairo', sans-serif; */
             --home-cat-gap: 12px;
             --home-cat-visible: 4;
             display: grid;

@@ -74,12 +74,8 @@
     --bs-black-rgb: 0, 0, 0;
     --bs-body-color-rgb: 33, 37, 41;
     --bs-body-bg-rgb: 255, 255, 255;
-    --bs-font-sans-serif: "Cairo", system-ui, -apple-system, "Segoe UI", Roboto,
-        "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif,
-        "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
-        "Noto Color Emoji";
-    --bs-font-monospace: "Cairo",SFMono-Regular, Menlo, Monaco, Consolas,
-        "Liberation Mono", "Courier New", monospace;
+    --bs-font-sans-serif: 'cairo', sans-serif;
+    --bs-font-monospace:'cairo', sans-serif;
     --bs-gradient: linear-gradient(
         180deg,
         rgba(255, 255, 255, 0.15),
@@ -11299,3 +11295,5 @@ fieldset:disabled .btn {
     }
 }
 /*# sourceMappingURL=bootstrap.min.css.map */
+
+

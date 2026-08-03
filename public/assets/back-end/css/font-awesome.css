@@ -2924,3 +2924,8 @@
     overflow: visible;
     clip: auto
 }
+
+
+html body{
+  font-family: 'cairo', sans-serif;
+}

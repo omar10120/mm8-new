@@ -208,3 +208,7 @@ body.lb-disable-scrolling {
 }
 
 
+
+html body{
+  font-family: 'cairo', sans-serif;
+}

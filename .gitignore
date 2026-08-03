@@ -24,4 +24,4 @@ style-extended.css.map
 temp-data-folder/
 /Modules/Gateways
 /public/Modules/Gateways
-resources/lang
+/resources/lang

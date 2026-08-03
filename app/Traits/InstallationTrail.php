@@ -339,7 +339,7 @@ trait InstallationTrail
         $adminEmail = str_replace('"', '\"', session('admin_email', ''));
         $adminEmail = '"' . $adminEmail . '"';
 
-        $output = 'APP_NAME=6valley' . time() . '
+        $output = 'APP_NAME=mm8market' . time() . '
 APP_ENV=live
 APP_KEY=base64:' . $key . '
 APP_DEBUG=false

@@ -119,10 +119,10 @@
             </button>
             <img width="44" class="img-fit aspect-1 w-40px flex-shrink-0"
                 src="{{ getStorageImages(path: $web_config['mob_logo'], type: 'logo') }}"
-                alt="6Valley"
+                alt="mm8market"
             >
             <div class="flex-grow-1">
-                <h5 class="fs-14 mb-1">6Valley {{ translate('Mobile_App') }}</h5>
+                <h5 class="fs-14 mb-1">mm8market {{ translate('Mobile_App') }}</h5>
                 <div class="fs-11 opacity-70">{{ translate('For_better_experience_download') }}</div>
                 <button type="button" id="install-btn" class="btn btn--primary fs-12 fw-semibold px-2 py-1 mt-2">
                     {{ translate('Download') }}
@@ -370,18 +370,18 @@
         </div>
     `;
     $(document).on('click','#cookie-accept',function() {
-        document.cookie = '6valley_cookie_consent=accepted; max-age=' + 60 * 60 * 24 * 30;
+        document.cookie = 'mm8market_cookie_consent=accepted; max-age=' + 60 * 60 * 24 * 30;
         $('#cookie-section').hide();
     });
     $(document).on('click','#cookie-reject',function() {
-        document.cookie = '6valley_cookie_consent=reject; max-age=' + 60 * 60 * 24;
+        document.cookie = 'mm8market_cookie_consent=reject; max-age=' + 60 * 60 * 24;
         $('#cookie-section').hide();
     });
 
     $(document).ready(function() {
-        if (document.cookie.indexOf("6valley_cookie_consent=accepted") !== -1) {
+        if (document.cookie.indexOf("mm8market_cookie_consent=accepted") !== -1) {
             $('#cookie-section').hide();
-        } else if (document.cookie.indexOf("6valley_cookie_consent=reject") !== -1) {
+        } else if (document.cookie.indexOf("mm8market_cookie_consent=reject") !== -1) {
             $('#cookie-section').hide();
         } else{
             $('#cookie-section').html(cookie_content).show();

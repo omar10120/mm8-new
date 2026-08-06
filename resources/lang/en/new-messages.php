@@ -305,4 +305,11 @@ return [
 	"mm8-admin-demo-jhisdfhisufjifjfijqw5467" => "Mm8-admin-demo-jhisdfhisufjifjfijqw5467",
 	"environment_variables_updated_successfully" => "Environment variables updated successfully",
 	"Please_update_address_information" => "Please update address information",
+	"MyFatoorah_Payment" => "MyFatoorah Payment",
+	"Complete_Payment" => "Complete Payment",
+	"Secure_payment_powered_by_MyFatoorah" => "Secure payment powered by MyFatoorah",
+	"Payment_failed_please_try_again" => "Payment failed please try again",
+	"Verifying_payment" => "Verifying payment",
+	"Payment_verification_failed" => "Payment verification failed",
+	"Unable_to_load_payment_form" => "Unable to load payment form",
 ];

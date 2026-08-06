@@ -14,6 +14,7 @@ use App\Http\Controllers\Payment_Methods\BkashPaymentController;
 use App\Http\Controllers\Payment_Methods\FlutterwaveV3Controller;
 use App\Http\Controllers\Payment_Methods\LiqPayController;
 use App\Http\Controllers\Payment_Methods\MercadoPagoController;
+use App\Http\Controllers\Payment_Methods\MyfatoorahPaymentController;
 use App\Http\Controllers\Payment_Methods\PaymobController;
 use App\Http\Controllers\Payment_Methods\PaypalPaymentController;
 use App\Http\Controllers\Payment_Methods\PaystackController;
@@ -489,6 +490,14 @@ if (!$isGatewayPublished) {
             Route::any('pay', [PaytabsController::class, 'payment'])->name('pay');
             Route::any('callback', [PaytabsController::class, 'callback'])->name('callback');
             Route::any('response', [PaytabsController::class, 'response'])->name('response');
+        });
+
+        //MYFATOORAH
+        Route::group(['prefix' => 'myfatoorah', 'as' => 'myfatoorah.'], function () {
+            Route::get('pay', [MyfatoorahPaymentController::class, 'index'])->name('index');
+            Route::post('make-payment', [MyfatoorahPaymentController::class, 'make_payment'])->name('make_payment');
+            Route::any('callback', [MyfatoorahPaymentController::class, 'callback'])->name('callback')
+                ->withoutMiddleware([VerifyCsrfToken::class]);
         });
     });
 }

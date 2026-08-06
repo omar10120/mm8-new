@@ -10,6 +10,10 @@ const GATEWAYS_DEFAULT_204 = [
     'response_code' => 'gateways_default_204',
     'message' => 'information not found'
 ];
+const idontknow = [
+    'response_code' => 'idontknow',
+    'message' => 'information not found'
+];
 
 const GATEWAYS_DEFAULT_400 = [
     'response_code' => 'gateways_default_400',

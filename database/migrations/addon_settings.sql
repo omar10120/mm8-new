@@ -93,6 +93,20 @@ INSERT INTO `addon_settings` (`id`, `key_name`, `live_values`, `test_values`, `s
 ('f149c546-d8ea-11ed-8249-0c7a158e4469', 'viatech', '{\"gateway\":\"viatech\",\"mode\":\"live\",\"status\":0,\"api_url\":\"\",\"api_key\":\"\",\"sender_id\":\"\",\"otp_template\":\"\"}', '{\"gateway\":\"viatech\",\"mode\":\"live\",\"status\":0,\"api_url\":\"\",\"api_key\":\"\",\"sender_id\":\"\",\"otp_template\":\"\"}', 'sms_config', 'live', 0, NULL, NULL, NULL),
 ('f149cd9c-d8ea-11ed-8249-0c7a158e4469', '019_sms', '{\"gateway\":\"019_sms\",\"mode\":\"live\",\"status\":0,\"password\":\"\",\"username\":\"\",\"username_for_token\":\"\",\"sender\":\"\",\"otp_template\":\"\"}', '{\"gateway\":\"019_sms\",\"mode\":\"live\",\"status\":0,\"password\":\"\",\"username\":\"\",\"username_for_token\":\"\",\"sender\":\"\",\"otp_template\":\"\"}', 'sms_config', 'live', 0, NULL, NULL, NULL);
 
+
+INSERT INTO `addon_settings` (`id`, `key_name`, `live_values`, `test_values`, `settings_type`, `mode`, `is_active`, `created_at`, `updated_at`, `additional_data`)
+VALUES (
+    '6b9c9d5a-8f4b-4d2e-9a3c-5e6f7d8e9f0a',   -- new UUID (generate your own)
+    'myfatoorah',
+    '{"gateway":"myfatoorah","mode":"live","status":"0","token":"data","base_url":"data","session_js_url":"data"}',
+    '{"gateway":"myfatoorah","mode":"test","status":"0","token":"data","base_url":"data","session_js_url":"data"}',
+    'payment_config',
+    'live',                                  -- or 'test' as default
+    0,                                       -- inactive initially
+    NULL,
+    '2026-08-05 12:00:00',                   -- current timestamp
+    '{"gateway_title":"MyFatoorah","gateway_image":null}'
+);
 --
 -- Indexes for dumped tables
 --

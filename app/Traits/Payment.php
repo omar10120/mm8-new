@@ -38,6 +38,7 @@ trait Payment
 
         $routes = [
             'ssl_commerz' => 'payment/sslcommerz/pay',
+            'myfatoorah' => 'payment/myfatoorah/pay',
             'stripe' => 'payment/stripe/pay',
             'paymob_accept' => 'payment/paymob/pay',
             'flutterwave' => 'payment/flutterwave-v3/pay',
@@ -74,6 +75,7 @@ trait Payment
             'cashfree' => 'payment/cashfree/pay',
             'instamojo' => 'payment/instamojo/pay',
             'mercadopago_pix' => 'payment/mercadopago_pix/pay',
+            'myfatoorah' => 'payment/myfatoorah/pay',
         ];
         if (array_key_exists($payment->payment_method, $routes)) {
             return url("{$routes[$payment->payment_method]}/?payment_id={$payment->id}");

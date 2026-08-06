@@ -560,6 +560,7 @@ enum GlobalConstant
         ['key' => 'payfast', 'value' => 'Pay Fast'],
         ['key' => 'worldpay', 'value' => 'World Pay'],
         ['key' => 'sixcash', 'value' => 'Six Cash'],
+        ['key' => 'myfatoorah', 'value' => 'MyFatoorah'],
     ];
 
     //currencies
@@ -1174,7 +1175,8 @@ enum GlobalConstant
         'paytabs',
         'liqpay',
         'mercadopago',
-        'bkash'
+        'bkash',
+        'myfatoorah'
     ];
 
     const DEFAULT_SMS_GATEWAYS = [

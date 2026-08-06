@@ -26,6 +26,7 @@ use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
+use Illuminate\Support\Facades\Log;
 
 class Helpers
 {
@@ -269,7 +270,7 @@ class Helpers
     {
         return [
             'ssl_commerz', 'paypal', 'stripe', 'razor_pay', 'paystack', 'senang_pay', 'paymob_accept',
-            'flutterwave', 'paytm', 'paytabs', 'liqpay', 'mercadopago', 'bkash'
+            'flutterwave', 'paytm', 'paytabs', 'liqpay', 'mercadopago', 'bkash', 'myfatoorah'
         ];
     }
 
@@ -810,6 +811,7 @@ if (!function_exists('payment_gateways')) {
     function payment_gateways()
     {
         $paymentGatewayPublishedStatus = config('get_payment_publish_status') ?? 0;
+        Log::info($paymentGatewayPublishedStatus);
 
         $paymentGatewaysQuery = Setting::whereIn('settings_type', ['payment_config'])->where('is_active', 1);
         if ($paymentGatewayPublishedStatus == 1) {

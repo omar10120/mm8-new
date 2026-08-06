@@ -145,7 +145,16 @@ class PaymentConfigProvider extends ServiceProvider
 
                 Config::set('config_paytm', $config);
             }
-
+            $data = BusinessSetting::where(['type' => 'myfatoorah'])->first();
+            $myfatoorah = json_decode($data['value'], true);
+            if ($myfatoorah) {
+                $config = array(
+                    'api_key' => env('MYFATOORAH_TOKEN', $myfatoorah['api_key']),
+                    'base_url' => env('MYFATOORAH_BASE_URL', $myfatoorah['base_url']),
+                    'session_js_url' => env('MYFATOORAH_SESSION_JS_URL', $myfatoorah['session_js_url']),
+                );
+            }
+            Config::set('myfatoorah', $config);
         } catch (\Exception $ex) {
 
         }

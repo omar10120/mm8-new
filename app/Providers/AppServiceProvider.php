@@ -33,6 +33,7 @@ use Illuminate\Support\Facades\Request;
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Support\Facades\View;
 use Illuminate\Support\ServiceProvider;
+use Illuminate\Support\Facades\Log;
 
 ini_set('memory_limit', -1);
 ini_set('upload_max_filesize', '180M');
@@ -134,7 +135,10 @@ class AppServiceProvider extends ServiceProvider
                             $paymentsGatewaysList = $paymentGatewaysQuery->select('key_name', 'additional_data')->get();
                         } else {
                             $paymentsGatewaysList = $paymentGatewaysQuery->whereIn('key_name', GlobalConstant::DEFAULT_PAYMENT_GATEWAYS)->select('key_name', 'additional_data')->get();
+                            Log::info($paymentsGatewaysList);
+                            Log::info($paymentGatewaysQuery->whereIn('key_name', GlobalConstant::DEFAULT_PAYMENT_GATEWAYS)->select('key_name', 'additional_data')->get());
                         }
+                        
 
                         $customerLoginOptions = LoginSetup::where(['key' => 'login_options'])->first()?->value ?? '';
                         $customerSocialLoginOptions = LoginSetup::where(['key' => 'social_media_for_login'])->first()?->value ?? '';
@@ -162,7 +166,7 @@ class AppServiceProvider extends ServiceProvider
                                 });
                             })
                             ->count();
-
+                           
                         $web_config += [
                             'cookie_setting' => Helpers::get_settings($web, 'cookie_setting'),
                             'announcement' => getWebConfig(name: 'announcement'),
@@ -199,7 +203,8 @@ class AppServiceProvider extends ServiceProvider
                             'clearance_sale_product_count' => $this->cacheClearanceSaleProductsCount(),
                             'business_pages' => $this->cacheBusinessPagesTable(),
                         ];
-
+                        Log::info($paymentsGatewaysList);
+                        
                         if (theme_root_path() == "theme_fashion") {
                             $featuresSection = [
                                 'features_section_top' => getWebConfig(name: 'features_section_top') ?? [],
@@ -216,6 +221,8 @@ class AppServiceProvider extends ServiceProvider
                             ];
                         }
                     }
+
+                    
 
                     // Language
                     $language = getWebConfig(name: 'language') ?? [];

@@ -151,6 +151,12 @@ class CurrencyController extends BaseController
                 ToastMagic::warning(translate('Before_update_ZAR') . ", " . translate('disable_the_PAYSTACK_payment_gateway.'));
                 return back();
             }
+        } elseif ($currency['code'] == 'USD' && $request['code'] != 'USD') {
+            $config = $this->settingRepo->getFirstWhere(params: ['key_name' => 'myfatoorah']);
+            if ($config['is_active']) {
+                ToastMagic::warning(translate('Before_update_USD') . ", " . translate('disable_the_MYFATOORAH_payment_gateway.'));
+                return back();
+            }
         }
 
         $dataArray = [

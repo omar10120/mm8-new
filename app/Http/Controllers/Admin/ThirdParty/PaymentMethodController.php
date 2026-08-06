@@ -18,6 +18,7 @@ use Illuminate\Http\Request;
 use Illuminate\Contracts\View\View;
 use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Pagination\LengthAwarePaginator;
+use Illuminate\Support\Facades\Log;
 
 class PaymentMethodController extends BaseController
 {
@@ -47,7 +48,7 @@ class PaymentMethodController extends BaseController
             whereInFilters: ['settings_type' => ['payment_config'], 'key_name' => GlobalConstant::DEFAULT_PAYMENT_GATEWAYS],
             dataLimit: 'all',
         );
-
+        
         $currencies = $this->currencyRepo->getListWhere(
             dataLimit: 'all',
         );
@@ -63,7 +64,7 @@ class PaymentMethodController extends BaseController
         $paymentGatewaysList = $paymentGatewaysList->sortBy(function ($item) {
             return count($item['live_values']);
         })->values()->all();
-
+        Log::info($paymentGatewaysList);
         $paymentUrl = $this->settingService->getVacationData(type: 'payment_setup');
         return view('admin-views.third-party.payment-method.index', [
             'paymentGatewaysList' => $paymentGatewaysList,
@@ -139,6 +140,7 @@ class PaymentMethodController extends BaseController
         $status = $request['status'] ?? 0;
         if ($request['status'] == 1) {
             $gateway = $this->settingRepo->getFirstWhere(params: ['key_name' => $request['gateway'], 'settings_type' => 'payment_config']);
+            Log::info($gateway);
             if ($gateway) {
                 $paymentGatewayPublishedStatus = config('get_payment_publish_status') ?? 0;
                 $paymentGatewaysList = $this->settingRepo->getListWhereIn(

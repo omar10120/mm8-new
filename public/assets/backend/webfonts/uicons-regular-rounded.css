@@ -16,8 +16,11 @@
     font-display: swap;
 }
 
+html body{
+    font-family: "cairo", sans-serif !important;
+}
     i[class^="fi-rr-"]:before, i[class*=" fi-rr-"]:before, span[class^="fi-rr-"]:before, span[class*="fi-rr-"]:before {
-font-family: uicons-regular-rounded !important;
+font-family: "cairo", uicons-regular-rounded !important;
 font-style: normal;
 font-weight: normal !important;
 font-variant: normal;

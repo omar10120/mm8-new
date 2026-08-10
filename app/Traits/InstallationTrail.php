@@ -305,19 +305,19 @@ trait InstallationTrail
                 'title' => 'Safe Payment',
                 'image' => '',
                 'status' => 1,
-            ],
-            [
-                'item' => 'return_policy',
-                'title' => '7 Days Return Policy',
-                'image' => '',
-                'status' => 1,
-            ],
-            [
-                'item' => 'authentic_product',
-                'title' => '100% Authentic Products',
-                'image' => '',
-                'status' => 1,
-            ],
+            ]
+            // [
+            //     'item' => 'return_policy',
+            //     'title' => '7 Days Return Policy',
+            //     'image' => '',
+            //     'status' => 1,
+            // ],
+            // [
+            //     'item' => 'authentic_product',
+            //     'title' => '100% Authentic Products',
+            //     'image' => '',
+            //     'status' => 1,
+            // ],
         ];
 
         if (BusinessSetting::where(['type' => 'company_reliability'])->first() == false) {

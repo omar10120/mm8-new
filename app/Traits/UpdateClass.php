@@ -773,19 +773,19 @@ trait UpdateClass
                 'title' => 'Safe Payment',
                 'image' => '',
                 'status' => 0,
-            ],
-            [
-                'item' => 'return_policy',
-                'title' => '7 Days Return Policy',
-                'image' => '',
-                'status' => 0,
-            ],
-            [
-                'item' => 'authentic_product',
-                'title' => '100% Authentic Products',
-                'image' => '',
-                'status' => 0,
-            ],
+            ]
+            // [
+            //     'item' => 'return_policy',
+            //     'title' => '7 Days Return Policy',
+            //     'image' => '',
+            //     'status' => 0,
+            // ],
+            // [
+            //     'item' => 'authentic_product',
+            //     'title' => '100% Authentic Products',
+            //     'image' => '',
+            //     'status' => 0,
+            // ],
         ];
 
         $this->businessSettingGetOrInsert(type: 'company_reliability', value: json_encode($data));

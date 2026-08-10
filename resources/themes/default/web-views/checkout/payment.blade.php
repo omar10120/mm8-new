@@ -104,7 +104,7 @@
                                             </div>
 
                                             @if ($cashOnDeliveryBtnShow && $cash_on_delivery['status'])
-                                                <div class="bring_change_amount_section">
+                                                <!-- <div class="bring_change_amount_section">
                                                     <div class="collapse show mb-10px" id="bring_change_amount"
                                                          data-more="{{ translate('See_More') }}"
                                                          data-less="{{ translate('See_Less') }}">
@@ -138,7 +138,7 @@
                                                             {{ translate('See_Less') }}
                                                         </a>
                                                     </div>
-                                                </div>
+                                                </div> -->
                                             @endif
 
                                         @endif

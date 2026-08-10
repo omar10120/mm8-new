@@ -1,14 +1,12 @@
 [
     {
-        "relation": [
-            "delegate_permission/common.handle_all_urls"
-        ],
-        "target": {
-            "namespace": "android_app",
-            "package_name": "com.sixamtech.sixvalley",
-            "sha256_cert_fingerprints": [
-                "CA:2E:F7:1B:D0:D9:1F:A9:48:1E:5A:C6:19:7D:0C:F0:1C:AD:67:39:BA:41:58:21:10:41:07:9D:DE:99:36:11"
-            ]
-        }
+      "relation": ["delegate_permission/common.handle_all_urls"],
+      "target": {
+        "namespace": "android_app",
+        "package_name": "technocode.mm8.mm8",
+        "sha256_cert_fingerprints": [
+          "29:D3:5E:DF:37:7F:4B:C1:B7:CB:9F:2D:41:1D:33:80:F0:05:68:CF:38:F1:FD:8B:69:CA:D9:65:46:6D:47:4E"
+        ]
+      }
     }
-]
+  ]

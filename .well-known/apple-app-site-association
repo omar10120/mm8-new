@@ -1,15 +1,14 @@
 {
     "applinks": {
-        "apps": [],
-        "details": [
-            {
-                "appID": ".",
-                "paths": [
-                    "/",
-                    "/product/*",
-                    "/track-order/*"
-                ]
-            }
-        ]
+      "apps": [],
+      "details": [
+        {
+          "appID": "LV52R96Q6A.technocode.mm8.mm8",
+          "paths": ["*"]
+        }
+      ]
+    },
+    "webcredentials": {
+      "apps": ["LV52R96Q6A.technocode.mm8.mm8"]
     }
-}
+  }

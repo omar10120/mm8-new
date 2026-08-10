@@ -231,7 +231,7 @@
                                 @if($physical_product_view)
                                     <div class="form-check d-flex gap-3 align-items-center">
                                         <input type="checkbox" id="same_as_shipping_address" name="same_as_shipping_address"
-                                               class="form-check-input action-hide-billing-address mt-0" {{$billingInputByCustomer==1?'':'checked'}}>
+                                               class="form-check-input action-hide-billing-address mt-0"{{$billingInputByCustomer==1 ? 'checked' : ''}}>
                                         <label class="form-check-label user-select-none" for="same_as_shipping_address">
                                             {{ translate('same_as_shipping_address')}}
                                         </label>
@@ -463,6 +463,23 @@
 
 @push('script')
     <script>
+
+        $(document).ready(function() {
+            function toggleBillingAddress() {
+                if ($('#same_as_shipping_address').is(':checked')) {
+                    $('#hide_billing_address').hide(); // or .slideUp()
+                } else {
+                    $('#hide_billing_address').show(); // or .slideDown()
+                }
+            }
+
+            // Initial toggle
+            toggleBillingAddress();
+
+            // On change, toggle again
+            $('#same_as_shipping_address').on('change', toggleBillingAddress);
+        });
+
         "use strict";
         const deliveryRestrictedCountries = @json($countriesName);
         function deliveryRestrictedCountriesCheck(countryOrCode, elementSelector, inputElement) {

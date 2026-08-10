@@ -312,4 +312,7 @@ return [
 	"Verifying_payment" => "Verifying payment",
 	"Payment_verification_failed" => "Payment verification failed",
 	"Unable_to_load_payment_form" => "Unable to load payment form",
+	"no_payment_method_list" => "No payment method list",
+	"add_new_method" => "Add new method",
+	"you_must_active_one_of_offline_payment_methods" => "You must active one of offline payment methods",
 ];

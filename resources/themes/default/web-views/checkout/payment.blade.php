@@ -54,7 +54,7 @@
                                             <div class="d-flex flex-sm-nowrap flex-wrap w-100 gap-3 mb-3">
                                                 @if ($cashOnDeliveryBtnShow && $cash_on_delivery['status'])
                                                     <div id="cod-for-cart" class="w-100 h-100 cod-for-cart">
-                                                        <div class="card cursor-pointer">
+                                                        <!-- <div class="card cursor-pointer">
                                                             <form action="{{ route('checkout-complete') }}" method="get"
                                                                   class="needs-validation" id="cash_on_delivery_form">
                                                                 <label class="m-0 pt-2 pb-1">
@@ -76,7 +76,7 @@
                                                                     </span>
                                                                 </label>
                                                             </form>
-                                                        </div>
+                                                        </div> -->
                                                     </div>
                                                 @endif
 
